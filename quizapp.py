@@ -1,4 +1,7 @@
-# Mario Bahena
+# Quiz App Program
+# Author: [Author Name]
+# Date: [Date]
+# Description: This program tests users on a specific topic and provides feedback on their performance
 
 import random  # Importing the random module to use for selecting random questions
 
@@ -7,10 +10,10 @@ def ask_question(question, correct_answer):
     answer = input(f"Your answer: ")  # Have the user input an answer to the question
     if answer.lower() == correct_answer.lower():  # Check if the answer matches the correct answer
         print("You answered correctly!")  # If the answer is correct, print a success message
-        return True  # Return True to indicate the answer was correct
+        return True  # Return True to say the answer was correct
     else:
         print(f"Wrong! The correct answer is: {correct_answer}")  # If the answer is incorrect, print the correct answer
-        return False  # Return False to indicate the answer was incorrect
+        return False  # Return False to say the answer was incorrect
 
 
 # Feedback based on incorrect answers
@@ -29,7 +32,7 @@ def provide_feedback(incorrect_answers):
 
 # Function for school-related subjects
 def school(school_subject):
-    subjects = {  # A dictionary of subjects and a list of questions for each subject AND we'll use lists to store questions for each subject since it allows for easy handling and iteration of questions.
+    subjects = {  # A dictionary of subjects for each subject AND we'll use lists to store questions for each subject since it allows for easy handling and iteration of questions.
         "U.S History": [("Which is the smallest American state by land?", "Rhode Island"),
                         ("When did the Civil War start?", "1861"),
                         ("What is the last state to be added to the United States?", "Hawaii"),
@@ -86,7 +89,7 @@ def school(school_subject):
 
 # Function for pop culture questions
 def social(pop_culture):  # Parameter to specify the pop culture topic
-    culture = {  # A dictionary of pop culture topics and a list of questions for each topic AND we'll use lists to store questions for each subject since it allows for easy handling and iteration of questions.
+    culture = {  # A dictionary of pop culture topics for each topic AND we'll use lists to store questions for each subject since it allows for easy handling and iteration of questions.
         "Films": [("What is the highest-grossing film of all time?", "Avatar"),
                   ("What film was released in 2021 and directed by Denis Villeneuve?", "Dune"),
                   ("What movie franchise parodies horror films?", "Scary Movie"),
